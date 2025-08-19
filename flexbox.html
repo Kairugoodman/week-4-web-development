@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Layout Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Normal Flow */
+    .block {
+      background: lightblue;
+      margin: 5px 0;
+    }
+    .inline {
+      background: pink;
+    }
+
+    /* Display */
+    .inline-block {
+      display: inline-block;
+      background: orange;
+      padding: 5px;
+      margin: 5px;
+      width: 100px;
+    }
+    .none {
+      display: none; /* Hidden */
+    }
+
+    /* Box Model */
+    .box {
+      margin: 15px;
+      border: 5px solid green;
+      padding: 10px;
+      background: lightyellow;
+      width: 150px;
+    }
+
+    /* Positioning */
+    .relative {
+      position: relative;
+      left: 30px;
+      background: lavender;
+    }
+    .absolute {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: salmon;
+      padding: 5px;
+    }
+    .fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: teal;
+      color: white;
+      padding: 5px;
+    }
+    .sticky {
+      position: sticky;
+      top: 0;
+      background: gold;
+      padding: 5px;
+    }
+
+    /* Flexbox */
+    .flex {
+      display: flex;
+      gap: 10px;
+      background: #f0f0f0;
+      padding: 10px;
+    }
+    .flex div {
+      flex: 1;
+      background: lightcoral;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: #e0e0e0;
+      padding: 10px;
+    }
+    .grid div {
+      background: lightgreen;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. Normal Flow</h2>
+  <p class="block">I am a block element</p>
+  <span class="inline">Inline 1</span>
+  <span class="inline">Inline 2</span>
+
+  <h2>2. Display Property</h2>
+  <div class="inline-block">Inline-block</div>
+  <div class="inline-block">Inline-block</div>
+  <p class="none">You can't see me (display: none)</p>
+
+  <h2>3. Box Model</h2>
+  <div class="box">Margin → Border → Padding → Content</div>
+
+  <h2>4. Positioning</h2>
+  <p class="relative">Relative (moved 30px right)</p>
+  <p class="sticky">Sticky header (sticks when scrolling)</p>
+  <p>Scroll down to see <span class="absolute">Absolute box</span></p>
+  <p style="margin-bottom: 300px;">Keep scrolling...</p>
+  <p class="fixed">Fixed (always bottom-right)</p>
+
+  <h2>5. Flexbox (1D Layout)</h2>
+  <div class="flex">
+    <div>Flex 1</div>
+    <div>Flex 2</div>
+    <div>Flex 3</div>
+  </div>
+
+  <h2>6. Grid (2D Layout)</h2>
+  <div class="grid">
+    <div>Grid 1</div>
+    <div>Grid 2</div>
+    <div>Grid 3</div>
+    <div>Grid 4</div>
+    <div>Grid 5</div>
+    <div>Grid 6</div>
+  </div>
+
+</body>
+</html>

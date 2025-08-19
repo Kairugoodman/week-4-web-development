@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Property Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .demo {
+      margin: 10px 0;
+      padding: 10px;
+      border: 2px solid black;
+      background: lightblue;
+    }
+
+    /* inline-block elements */
+    .inline-block {
+      display: inline-block;
+      width: 120px;
+      height: 50px;
+      background: lightcoral;
+      margin: 5px;
+      text-align: center;
+      line-height: 50px;
+    }
+
+    /* flex container */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      background: lightgreen;
+      padding: 10px;
+    }
+    .flex-container div {
+      flex: 1;
+      background: darkgreen;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background: lightyellow;
+      padding: 10px;
+    }
+    .grid-container div {
+      background: goldenrod;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Display: block</h2>
+  <div class="demo" style="display:block;">I am block (take full width)</div>
+  <div class="demo" style="display:block;">Another block element</div>
+
+  <h2>Display: inline</h2>
+  <span class="demo" style="display:inline;">Inline 1</span>
+  <span class="demo" style="display:inline;">Inline 2</span>
+  <span class="demo" style="display:inline;">Inline 3</span>
+
+  <h2>Display: inline-block</h2>
+  <div class="inline-block">Box 1</div>
+  <div class="inline-block">Box 2</div>
+  <div class="inline-block">Box 3</div>
+
+  <h2>Display: none</h2>
+  <p>This text is visible. <span style="display:none;">You can’t see me!</span> But this is visible again.</p>
+
+  <h2>Display: flex</h2>
+  <div class="flex-container">
+    <div>Flex 1</div>
+    <div>Flex 2</div>
+    <div>Flex 3</div>
+  </div>
+
+  <h2>Display: grid</h2>
+  <div class="grid-container">
+    <div>Grid 1</div>
+    <div>Grid 2</div>
+    <div>Grid 3</div>
+    <div>Grid 4</div>
+    <div>Grid 5</div>
+    <div>Grid 6</div>
+  </div>
+
+</body>
+</html>
